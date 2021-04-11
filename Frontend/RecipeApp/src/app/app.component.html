@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-light nav-bg-color">
+    <a class="navbar-brand brand-styling" href="/"><b>Recipe App</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="stroke: white;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="d-flex align-items-end navbar-nav ml-lg-auto jump">
+            <li class="nav-item"><a class="nav-link" routerLink="">Home</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" routerLink="/browse">Browse Recipes</a></li> -->
+            <li class="nav-item"><a class="nav-link" *ngIf="userService.loggedIn()" routerLink="/addrecipe">Add Recipe</a></li>
+            <li class="nav-item"><a class="nav-link" *ngIf="!userService.loggedIn()" routerLink="/login">Login</a></li>
+            <li class="nav-item"><a class="nav-link" *ngIf="!userService.loggedIn()" routerLink="/register">Register</a></li>
+            <li class="nav-item"><a class="nav-link log-out" *ngIf="userService.loggedIn()" routerLink="/" (click)="userService.removeToken()">Log Out</a></li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+
+<footer class="sub-heading fixed-bottom" style="width: 100%; text-align: center">
+    Recipe App | 2021
+</footer>

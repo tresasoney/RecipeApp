@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 row justify-content-center"></div>
+        <h3>Add Recipe</h3>
+        <form (ngSubmit)="submit()">
+            <input class="form-control" type="text" name="Name" [(ngModel)]="recipe.name" placeholder="Recipe Name">
+            <input class="form-control" type="text" name="Author" [(ngModel)]="recipe.author"
+                placeholder="Recipe Author">
+            <input class="form-control" type="text" name="Time" [(ngModel)]="recipe.time" placeholder="Recipe Time">
+            <input class="form-control" type="text" name="img" [(ngModel)]="recipe.img" placeholder="Recipe Image">
+
+            <textarea class="form-control" [(ngModel)]="recipe.ingredients" placeholder="Recipe Ingredients"
+                name="Ingredients" cols="30" rows="5"></textarea>
+            <textarea class="form-control" [(ngModel)]="recipe.steps" placeholder="Recipe Instructions" name="steps"
+                cols="30" rows="5"></textarea>
+            <button class="btn btn-primary" type="submit">Add Recipe</button>
+        </form>
+    </div>
+</div>

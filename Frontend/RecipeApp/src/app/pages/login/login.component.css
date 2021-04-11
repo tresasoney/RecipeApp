@@ -1,0 +1,38 @@
+h3 {
+    text-align: center;
+}
+
+label {
+    margin-top: 0.5rem;
+}
+
+button {
+    width: max-content;
+    margin-top: 1rem;
+}
+
+.col-md-5 {
+    margin-top: 20vh;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59) 1 100%;
+}
+
+.sub-heading {
+    margin-top: 0.75rem;
+}
+
+label {
+    font-weight: 400;
+}
+
+label input {
+    font-weight: 300;
+}
+
+hr {
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}

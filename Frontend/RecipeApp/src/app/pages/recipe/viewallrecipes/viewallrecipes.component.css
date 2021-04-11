@@ -1,0 +1,8 @@
+.cursor-changer {
+    cursor: pointer !important;
+}
+
+.recipes {
+    text-align: center;
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 row justify-content-center">
+            <div class="col-12 row justify-content-center">
+                <div class="col-md-6 img-card" style="background-image: url({{recipe.img}});">
+                </div>
+            </div>
+            <div class="col-12 row justify-content-center">
+                <a class="btn btn-primary"  *ngIf="userService.loggedIn()" routerLink="/edit/{{recipe._id}}">Edit</a>
+                <button class="btn btn-danger"  *ngIf="userService.loggedIn()" (click)="delete(recipe._id)">Delete</button>
+                <h1>{{recipe.name}}</h1>
+                <h4>Author: {{recipe.author}}</h4>
+                <h4>Time: {{recipe.time}}</h4>
+                <h4>Ingredients:
+                    <ul *ngFor="let ingredient of ingredientsArray">
+                        <li>{{ingredient}}</li>
+                    </ul>
+                </h4>
+                <h4>Instructions: {{recipe.steps}}</h4>
+
+            </div>
+        </div>
+    </div>
+</div>
